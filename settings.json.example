@@ -1,0 +1,21 @@
+{
+    "path": {
+        "mainFileName": "main",
+        "images": "images",
+        "references": "references.bib"
+    },
+    "textFields": {
+        "faculty": "Машиностроительные технологии",
+        "department": "Оборудование и технологии прокатки",
+        "doctitle": "Отчет по эксплуатационной практике",
+        "fullname": "Ерченко Иларион Александрович",
+        "group": "МТ10-102",
+        "practicetype": "эксплуатационная",
+        "factory": "ФГБОУ ВО МГТУ им. Н. Э. Баумана",
+        "student": "Ерченко И.А.",
+        "prof": "Миронова М.О."
+    },
+    "release": {
+        "name": "Отчет"
+    }
+}
