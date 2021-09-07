@@ -1,9 +1,0 @@
-[0] Config.pm:311> INFO - This is Biber 2.16
-[0] Config.pm:314> INFO - Logfile is '.aux/main.blg'
-[144] biber-darwin:340> INFO - === Wed Sep  1, 2021, 14:17:57
-[170] Biber.pm:415> INFO - Reading '.aux/main.bcf'
-[334] Biber.pm:952> INFO - Found 0 citekeys in bib section 0
-[350] Utils.pm:395> WARN - The file '.aux/main.bcf' does not contain any citations!
-[363] bbl.pm:654> INFO - Writing '.aux/main.bbl' with encoding 'UTF-8'
-[364] bbl.pm:757> INFO - Output to .aux/main.bbl
-[364] Biber.pm:128> INFO - WARNINGS: 1
