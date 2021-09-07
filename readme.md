@@ -6,10 +6,10 @@ This package is a LaTeX document class for writing papers under the GOST7-32 Rus
 * title pages with custom text fields;
 * references management;
 * image, table and formula management with appendix support;
-* completely new Python-based LaTeX wrapper for SymPy for easily printing formulas according to the GOST standard;
+* completely new Python-based LaTeX wrapper for SymPy for easy formulas printing according to the GOST standard;
 * customizable settings in a JSON format that support storing custom variables.
 
-In other words -- this package is a dream of mine come true.
+In other words - this package is a dream of mine come true.
 
 ## How to use
 To begin you need to create a file `settings.json` (or copy `settings.json.example` and rename it). The field named `path` contains all the necessary info about the main LaTeX job name (the main file should be named `<mainFileName>.tex`).
