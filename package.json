@@ -6,8 +6,7 @@
   "author": "Иларион Ерченко <turolretar@gmail.com>",
   "license": "MIT",
   "private": true,
-  "scripts": {
-    "build": "latexmk -r './node_modules/gostex-732' main.tex",
-    "release": "lua './node_modules/gostex-732/scripts/release.lua'"
+  "bin": {
+    "build": "./bin/build.sh"
   }
 }
