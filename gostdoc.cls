@@ -46,7 +46,7 @@
 % Lua scripts support from scripts.lua file
 \RequirePackage{luacode}
 % \RequirePackage{luapackageloader}
-\directlua{scripts = dofile("scripts/scripts.lua")}
+\directlua{scripts = dofile("node_modules/gostex-732/scripts/scripts.lua")}
 \directlua{settings = scripts.loadJSON("settings.json")}
 
 \newcommand{\settings}[1]{

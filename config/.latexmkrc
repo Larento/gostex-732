@@ -7,5 +7,5 @@
 
 $pdf_mode = 4;
 $postscript_mode = $dvi_mode = 0;
-$out_dir = "./.aux"
+$out_dir = "./.aux";
 ensure_path( 'TEXINPUTS', './node_modules/gostex-732//' );
