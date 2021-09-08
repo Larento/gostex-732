@@ -1,0 +1,12 @@
+{
+  "name": "gostex-732",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Larento/gostex-732.git",
+  "author": "Иларион Ерченко <turolretar@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "latexmk "
+  }
+}
