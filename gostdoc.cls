@@ -322,7 +322,7 @@
     unicode-math
 }
 
-\input{gostex-732/include/siunitx}
+\input{node_modules/gostex-732/include/siunitx}
 
 \sisetup{
     detect-weight,

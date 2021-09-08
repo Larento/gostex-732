@@ -1,7 +1,7 @@
-local scripts = dofile("scripts.lua")
-local configDir = "../../"
-local releaseDir = "../../"
-local outputDir = "../../.aux/"
+local scripts = dofile("node_modules/gostex-732/scripts/scripts.lua")
+local configDir = "./"
+local releaseDir = "./"
+local outputDir = ".aux/"
 local settingsPath = configDir .. "settings.json"
 
 local jobName = "main"
