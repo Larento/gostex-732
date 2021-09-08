@@ -7,6 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "latexmk "
+    "build": "latexmk -r './node_modules/gostex-732' main.tex",
+    "release": "lua './node_modules/gostex-732/scripts/release.lua'"
   }
 }

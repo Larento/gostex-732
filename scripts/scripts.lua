@@ -1,6 +1,6 @@
 -- require "lualibs"
 -- local json = require "cjson"
-local json = dofile("gostex-732/json.lua")
+local json = dofile("json.lua")
 local scripts = {}
 
 function scripts.setListMargins(listDepth)

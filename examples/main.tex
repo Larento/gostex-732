@@ -1,0 +1,153 @@
+\documentclass{gostdoc}
+\begin{document}
+
+\titlepage
+
+\toc
+
+\abstract
+\totalpages, \totalfigures, \totaltables, \totalappendices
+\begin{itemlist}
+    \item Первый
+    \item Второй элемента списка
+    \item Еще один
+    \item Элемент списка первого уровня, который не умещается на одной строке и, соответственно, распологается на нескольких строках. Начнем вложенный список:
+    \begin{itemlist}
+        \item Элемент списка второго уровня. Начнем вложенный список третьего уровня:
+        \begin{itemlist}
+            \item Первый элемент списка третьего уровня
+            \item Второй элемент списка третьего уровня
+            \item Последний элемент списка третьего и последнего уровня вложенности списков. Этот элемент также располагается на нескольких строках
+        \end{itemlist}
+        \item Это опять элемент, располагающийся на нескольких строках, однако уже списка второго уровня
+        \item Еще один элемент. Начнем еще один вложенный список третьего уровня:
+        \begin{itemlist}
+            \item Первый элемент списка третьего уровня
+            \item Второй элемент списка третьего уровня
+            \item Последний элемент списка третьего и последнего уровня вложенности списков. Этот элемент также располагается на нескольких строках
+        \end{itemlist}
+    \end{itemlist}
+    \item Элемент списка первого уровня
+\end{itemlist}
+
+\task
+\lipsum[12]
+
+\introduction
+Основная цель практики – изучить устроийство профилегибочного стана, расположенного в лаборатории имени А.И. Целикова кафедры МТ10 и составить графические материалы в виде плакатов и видеороликов, поясняющих процесс сборки узлов стана и его настройки.
+
+Задачами для достижения цели являются ознакомление с доступной конструкторской документации на профилегибочный стан и изучение способов регулировки рабочего инструмента стана (роликов) в виде, осуществленном в реальном стане.
+
+\section{Заголовок}
+\lipsum[1-2]
+
+\subsection{Подзаголовок}
+\lipsum[5-6]
+
+\subsubsection{Подподзаголовок}
+\lipsum[10]
+
+\section{Новый раздел}
+\lipsum[4-5]
+
+% \clearpage
+\subsection{Подраздел}
+Попробуем графон (Рисунок \ref{fig:themaze71}):
+
+\insertfigure[0.7\linewidth]{themaze71}{Надпись под рисунком надпись под рисунком надпись под рисунком надпись под рисунком надпись под рисунком}
+
+\lipsum[2-4]
+
+Теперь проверим как работают таблицы (таблица \ref{tab:info}):
+
+\begin{inserttable}[1.15]{info}{Надпись над таблицей надпись над таблицей надпись над таблицей надпись над таблицей надпись над таблицей}
+    \begin{tabular}{|l|c|}
+        \hline
+        afsfgdfcbcbc       & 2 \\
+        \hline
+        fbvgggnv nvgfgfgfg & 4 \\
+        \hline
+    \end{tabular}
+\end{inserttable}
+
+\lipsum[1]
+
+\subsection{Test}
+\lipsum[1]
+
+\insertfigurewithdesc{premaze}{This is really cool!}{Надпись под рисунком надпись под рисунком надпись под рисунком надпись под рисунком надпись под рисунком}
+
+\conclusion
+Вернемся к рисунку \ref{fig:premaze}.
+
+\lipsum[11]
+
+\appendix
+\lipsum[16]
+
+"Hey Lois?" -- "What?!" (рисунок \ref{fig:peter})
+
+\insertfigurewithdesc{peter}{This is Beter Griffon. He is a nice guy.}{Peter Grin in his natural habitat}
+
+\begin{numberedlist}
+    \item Hey
+    \item now
+    \item you're:
+    \begin{numberedlist}
+        \item a
+        \item rockstar,
+        \item get
+        \item your
+        \item game
+        \item on
+        \begin{numberedlist}
+            \item go
+            \item play
+        \end{numberedlist}
+    \end{numberedlist}
+    \item hey
+    \item now
+    \item you're
+    \item an
+    \item allstar
+    \begin{numberedlist}
+        \item go
+        \item get
+        \item paid
+        \item get
+        \item laid
+        \begin{numberedlist}
+            \item gatorade
+            \item am i right fellas?
+            \item up top
+        \end{numberedlist}
+    \end{numberedlist}
+\end{numberedlist}
+
+\appendix
+\lipsum[4-6]
+
+\appendix
+Hey man, this is таблица \ref{tab:grieferjesus}
+
+\begin{inserttable}[1.15]{grieferjesus}{Run's dead}
+    \begin{tabular}{|l|c|}
+        \hline
+        Hewwo everywone & 2             \\
+        \hline
+        This is         & 4             \\
+        \hline
+        Runnin on empty & 69            \\
+        \hline
+        Food review     & *clap* *clap* \\
+        \hline
+    \end{tabular}
+\end{inserttable}
+
+\lipsum[3-5]
+
+Примеры математических формул, выражений и определений. Обычное выражение в тексте: \( a=5 \)
+
+$\displaystyle \SI[]{0.1}{\per\second\per\meter}$
+
+\end{document}

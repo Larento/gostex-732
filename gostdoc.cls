@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{gostex-732/gostdoc}
+\ProvidesClass{gostdoc}
 %---------------------------------------------------------%
 % CLASS OPTIONS
 %---------------------------------------------------------%
@@ -46,7 +46,7 @@
 % Lua scripts support from scripts.lua file
 \RequirePackage{luacode}
 % \RequirePackage{luapackageloader}
-\directlua{scripts = dofile("gostdoc/scripts.lua")}
+\directlua{scripts = dofile("scripts/scripts.lua")}
 \directlua{settings = scripts.loadJSON("settings.json")}
 
 \newcommand{\settings}[1]{
@@ -322,7 +322,7 @@
     unicode-math
 }
 
-\input{gostex-732/siunitx}
+\input{gostex-732/include/siunitx}
 
 \sisetup{
     detect-weight,
@@ -376,7 +376,7 @@
 %---------------------------------------------------------%
 % TITLE PAGE MACROS
 %---------------------------------------------------------%
-\newcommand{\logo}{\includegraphics[height=30mm, align=c]{gostdoc/logo}}
+\newcommand{\logo}{\includegraphics[height=30mm, align=c]{include/logo}}
 
 \newcommand{\titleheadertext}{
     Министерство науки и высшего образования Российской Федерации Федеральное государственное бюджетное образовательное учреждение высшего образования\newline
