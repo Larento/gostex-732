@@ -1,7 +1,7 @@
-local scripts = dofile("gostdoc/scripts.lua")
-local configDir = "./"
-local releaseDir = "./"
-local outputDir = "./.aux/"
+local scripts = dofile("gostex-732/scripts.lua")
+local configDir = "../"
+local releaseDir = "../"
+local outputDir = "../.aux/"
 local settingsPath = configDir .. "settings.json"
 
 local jobName = scripts.readJSONField(settingsPath, "path/mainFileName")
