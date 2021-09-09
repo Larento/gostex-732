@@ -323,10 +323,7 @@
     dashed=false,
     url=false
 ]{biblatex}
-\bibliography{
-    \directlua{tex.print(settings["path"]["references"])}
-}
-% \bibliography{\settings{path/references}}
+\bibliography{references}
 \nocite{*}
 %---------------------------------------------------------%
 % EQUATIONS
