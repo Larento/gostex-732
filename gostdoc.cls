@@ -165,9 +165,7 @@
 \newcommand{\task}{\structuralsection{ИНДИВИДУАЛЬНОЕ ЗАДАНИЕ}}
 \newcommand{\introduction}{\structuralsection{ВВЕДЕНИЕ}}
 \newcommand{\conclusion}{\structuralsection{ЗАКЛЮЧЕНИЕ}}
-\newcommand{\references}{
-    \structuralsection{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
-}
+
 \renewcommand{\appendix}{
     \refstepcounter{appendix}
     \structuralsection{ПРИЛОЖЕНИЕ \Asbuk{appendix}}
@@ -325,6 +323,11 @@
 ]{biblatex}
 \bibliography{references}
 \nocite{*}
+
+\newcommand{\references}{
+    \structuralsection{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+    \printbibliography[heading=none]
+}
 %---------------------------------------------------------%
 % EQUATIONS
 %---------------------------------------------------------%
