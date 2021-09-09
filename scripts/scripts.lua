@@ -40,7 +40,7 @@ function scripts.copyFile(sourcePath, destinationPath)
 end
 
 function scripts.loadJSON(filePath)
-    return json:decode(scripts.readFile(filePath))
+    return json.decode(scripts.readFile(filePath))
 end
 
 -- Special path means you access table fields
