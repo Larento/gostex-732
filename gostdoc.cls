@@ -310,7 +310,20 @@
 %---------------------------------------------------------%
 % REFERENCES
 %---------------------------------------------------------%
-\RequirePackage[backend=biber]{biblatex}
+\RequirePackage{biblatex-gost}
+\RequirePackage[
+    backend=biber,
+    bibstyle=gost-numeric,
+    citestyle=numeric-comp,
+    language=auto,
+    babel=other,
+    sorting=ntvy,
+    doi=false,
+    eprint=false,
+    isbn=false,
+    dashed=false,
+    url=false
+]{biblatex}
 \addbibresource{\settings{path/references}}
 
 %---------------------------------------------------------%
