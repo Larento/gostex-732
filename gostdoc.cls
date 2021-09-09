@@ -325,7 +325,7 @@
     url=false
 ]{biblatex}
 \addbibresource{\settings{path/references}}
-
+\nocite{*}
 %---------------------------------------------------------%
 % EQUATIONS
 %---------------------------------------------------------%
