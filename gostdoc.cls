@@ -165,7 +165,9 @@
 \newcommand{\task}{\structuralsection{ИНДИВИДУАЛЬНОЕ ЗАДАНИЕ}}
 \newcommand{\introduction}{\structuralsection{ВВЕДЕНИЕ}}
 \newcommand{\conclusion}{\structuralsection{ЗАКЛЮЧЕНИЕ}}
-\newcommand{\references}{\structuralsection{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}}
+\newcommand{\references}{
+    \structuralsection{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+}
 \renewcommand{\appendix}{
     \refstepcounter{appendix}
     \structuralsection{ПРИЛОЖЕНИЕ \Asbuk{appendix}}
