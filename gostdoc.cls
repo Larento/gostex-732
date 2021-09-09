@@ -323,8 +323,8 @@
     dashed=false,
     url=false
 ]{biblatex}
-% \addbibresource{\settings{path/references}}
-% \nocite{*}
+\addbibresource{\settings{path/references}}
+\nocite{*}
 %---------------------------------------------------------%
 % EQUATIONS
 %---------------------------------------------------------%
