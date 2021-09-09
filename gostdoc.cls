@@ -310,7 +310,6 @@
 %---------------------------------------------------------%
 % REFERENCES
 %---------------------------------------------------------%
-\RequirePackage{biblatex-gost}
 \RequirePackage[
     backend=biber,
     bibstyle=gost-numeric,
