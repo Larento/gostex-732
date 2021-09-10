@@ -10,3 +10,5 @@ $postscript_mode = $dvi_mode = 0;
 $out_dir = "./.aux";
 ensure_path( 'TEXINPUTS', './node_modules/gostex-732//' );
 ensure_path( 'TEXINPUTS', './/' );
+add_cus_dep('pytxcode','pytxmcr',0,'pythontex');
+sub pythontex { return system("pythontex.py \"$_[0]\""); }

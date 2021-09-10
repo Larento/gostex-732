@@ -49,6 +49,9 @@
 \directlua{scripts = dofile("node_modules/gostex-732/scripts/scripts.lua")}
 \directlua{settings = scripts.loadJSON("settings.json")}
 
+\RequirePackage{pythontex}
+\setpythontexworkingdir{.}
+
 \newcommand{\settings}[1]{
     \directlua{
         tex.sprint(scripts.getTableFields(
