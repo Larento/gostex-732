@@ -164,8 +164,15 @@
     \regularsectionformat
 }
 
+\newcommand{\structuralsectionNOTOC}[1]{
+    \structuralsectionformat
+    \newpage
+    #1
+    \regularsectionformat
+}
+
 \renewcommand{\abstract}{\structuralsection{РЕФЕРАТ}}
-\newcommand{\task}{\structuralsection{ИНДИВИДУАЛЬНОЕ ЗАДАНИЕ}}
+\newcommand{\task}{\structuralsectionNOTOC{ИНДИВИДУАЛЬНОЕ ЗАДАНИЕ}}
 \newcommand{\introduction}{\structuralsection{ВВЕДЕНИЕ}}
 \newcommand{\conclusion}{\structuralsection{ЗАКЛЮЧЕНИЕ}}
 
