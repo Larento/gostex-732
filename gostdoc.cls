@@ -167,7 +167,7 @@
 \newcommand{\structuralsectionNOTOC}[1]{
     \structuralsectionformat
     \newpage
-    #1
+    \centerline{\structuralsectionfont#1}
     \regularsectionformat
 }
 
