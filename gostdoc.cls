@@ -51,10 +51,12 @@
 
 \RequirePackage{pythontex}
 \setpythontexworkingdir{.}
-\begin{pycode}
-import scripts.equation
-\end{pycode}
 
+\begin{pycode}
+import sys
+sys.path.append('./node_modules/gostex-732/scripts')
+import equation
+\end{pycode}
 
 \newcommand{\settings}[1]{
     \directlua{
