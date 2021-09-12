@@ -52,7 +52,7 @@
 \RequirePackage{pythontex}
 \setpythontexworkingdir{.}
 \begin{pycode}
-    import scripts.equation
+import scripts.equation
 \end{pycode}
 
 
