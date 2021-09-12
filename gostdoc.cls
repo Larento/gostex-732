@@ -51,6 +51,10 @@
 
 \RequirePackage{pythontex}
 \setpythontexworkingdir{.}
+\begin{pycode}
+    import scripts.equation
+\end{pycode}
+
 
 \newcommand{\settings}[1]{
     \directlua{
