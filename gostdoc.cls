@@ -50,12 +50,10 @@
 \directlua{settings = scripts.loadJSON("settings.json")}
 
 \RequirePackage{pythontex}
-\setpythontexworkingdir{.}
-
+\setpythontexworkingdir{../node_modules/gostex-732/scripts}
 \begin{pycode}
-import sys
-sys.path.append('./node_modules/gostex-732/scripts')
-import equation
+from equation import *
+P = ParameterCollection()
 \end{pycode}
 
 \newcommand{\settings}[1]{
