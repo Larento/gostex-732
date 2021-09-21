@@ -254,6 +254,7 @@ P = ParameterCollection()
 \renewcommand{\cftbeforesecskip}{0pt}
 
 \newcommand{\toc}{%
+    \newpage
     \begin{spacing}{1.75}%
         \tableofcontents%
     \end{spacing}%
