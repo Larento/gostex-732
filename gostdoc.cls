@@ -450,12 +450,11 @@ P = ParameterCollection()
     \renewcommand{\headrulewidth}{0mm}%
 }
 
-\newenvironment{\ifStringsEqual}[2]{
+\newenvironment{\ifStringsEqual}[2]{%
     \ifthenelse{\equal{\detokenize{#1}}{\detokenize{#2}}}
-}
-{
-    }
-    {}
+}{%
+    }%
+    {}%
 }
 
 \newcommand{\addTitlePage}[2]{
