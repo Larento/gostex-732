@@ -270,13 +270,11 @@ P = ParameterCollection()
     graphbox
 }
 
-\newcommand{\imagesPath}{\directlua{tex.print(settings["path"]["images"])}}
-
 % Regular labeled figure
 \newcommand{\insertfigure}[3][\linewidth]{
     \begin{figure}[!ht]%
         \centering%
-        \includegraphics[width=#1]{\imagesPath/#2}%
+        \includegraphics[width=#1]{\settings{path/images}/#2}%
         \caption{#3}\label{fig:#2}%
         \refstepcounter{figures}
         \vspace{-10pt}
@@ -287,7 +285,7 @@ P = ParameterCollection()
 \newcommand{\insertfigurewithdesc}[4][\linewidth]{
     \begin{figure}[!ht]
         \centering
-        \includegraphics[width=#1]{\imagesPath/#2}
+        \includegraphics[width=#1]{\settings{path/images}/#2}
         \caption*{#3}
         \vspace{-10pt}
         \caption{#4}\label{fig:#2}
@@ -430,15 +428,15 @@ P = ParameterCollection()
 
 \newcommand{\titleform}{
     \begin{spacing}{2.5}
-        \textfieldLabel{Студент}{\directlua{tex.sprint(settings["textFields"]["fullname"])}}{фамилия, имя, отчество}
-        \textfield{Группа}{\directlua{tex.sprint(settings["textFields"]["group"])}}
-        \textfield{Тип практики}{\directlua{tex.sprint(settings["textFields"]["practicetype"])}}
-        \textfield{Название предприятия}{\directlua{tex.sprint(settings["textFields"]["factory"])}}
+        \textfieldLabel{Студент}{\settings{textFields/fullname}}{фамилия, имя, отчество}
+        \textfield{Группа}{\settings{textFields/group}}
+        \textfield{Тип практики}{\settings{textFields/practiceType}}
+        \textfield{Название предприятия}{\settings{textFields/factory}}
 
         \vspace{3em}
 
-        \textfieldShortRightDoubleLabel{Студент}{\textbf{\directlua{tex.sprint(settings["textFields"]["student"])}}}{подпись, дата}{фамилия, и.о.}
-        \textfieldShortRightDoubleLabel{Руководитель практики}{\textbf{\directlua{tex.sprint(settings["textFields"]["prof"])}}}{подпись, дата}{фамилия, и.о.}
+        \textfieldShortRightDoubleLabel{Студент}{\textbf{\settings{textFields/student}}}{подпись, дата}{фамилия, и.о.}
+        \textfieldShortRightDoubleLabel{Руководитель практики}{\textbf{\settings{textFields/prof}}}{подпись, дата}{фамилия, и.о.}
         \textfieldShortLeft{Оценка}{}
     \end{spacing}
 }
@@ -455,7 +453,7 @@ P = ParameterCollection()
 }
 
 \newcommand{\addTitlePage}[2]{
-    \ifStringsEqual{\directlua{tex.sprint(settings["doctype"])}}{#1}{
+    \ifStringsEqual{\settings{doctype}}{#1}{
         \renewcommand{\titlepage}{#2}
     }
 }
@@ -482,13 +480,13 @@ P = ParameterCollection()
     \vspace{-1em}
 
     \begin{spacing}{2}
-    \smallfont\textfield{\MakeUppercase{Факультет}}{\directlua{tex.sprint(settings["textFields"]["faculty"])}}
+    \smallfont\textfield{\MakeUppercase{Факультет}}{\settings{textFields/faculty}}
 
-    \smallfont\textfield{\MakeUppercase{Кафедра}}{\directlua{tex.sprint(settings["textFields"]["department"])}}
+    \smallfont\textfield{\MakeUppercase{Кафедра}}{\settings{textFields/department}}
 
     \vspace{3em}
 
-    \centering\hugefont\textbf{\ulinethick{\MakeUppercase{\directlua{tex.sprint(settings["textFields"]["doctitle"])}}}}
+    \centering\hugefont\textbf{\ulinethick{\MakeUppercase{\settings{textFields/doctitle}}}}
     \end{spacing}
 
     \titleform
@@ -502,6 +500,21 @@ P = ParameterCollection()
 \addTitlePage{essay}{
     \thispagestyle{titlepage}
     \titleheader
+
+    \noindent\rule[-1em]{\textwidth}{3pt}
+    \noindent\rule[0.75em]{\textwidth}{0.5pt}
+
+    \vspace{-1em}
+
+    \begin{spacing}{2}
+    \smallfont\textfield{\MakeUppercase{Факультет}}{\settings{textFields/faculty}}
+
+    \smallfont\textfield{\MakeUppercase{Кафедра}}{\settings{textFields/department}}
+
+    \vspace{3em}
+
+    \centering\hugefont\textbf{\ulinethick{\MakeUppercase{\settings{textFields/doctitle}}}}
+    \end{spacing}
 
     \clearpage
 }
