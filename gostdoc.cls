@@ -65,6 +65,8 @@ P = ParameterCollection()
     }
 }
 
+\RequirePackage{ifthen}
+
 % Pages, figures, tables and appendix counters
 \newcounter{figures}
 \newcounter{tables}
@@ -448,7 +450,33 @@ P = ParameterCollection()
     \renewcommand{\headrulewidth}{0mm}%
 }
 
-\renewcommand{\titlepage}{
+\newenvironment{\ifStringsEqual}[2]{
+    \ifthenelse{\equal{\detokenize{#1}}{\detokenize{#2}}}
+}
+{
+    }
+    {}
+}
+
+\newcommand{\addTitlePage}[2]{
+    \begin{ifStringsEqual}{\directlua{tex.sprint(settings["doctype"])}}{#1}
+        \renewcommand{\titlepage}{#2}
+    \end{ifStringsEqual}
+}
+
+%---------------------------------------------------------%
+% DEFAULT TITLE PAGE
+% "doctype" = "default"
+%---------------------------------------------------------%
+\addTitlePage{default}{
+    \thispagestyle{titlepage}
+}
+
+%---------------------------------------------------------%
+% PRACTICE REPORT TITLE PAGE
+% "doctype" = "practiceReport"
+%---------------------------------------------------------%
+\addTitlePage{practiceReport}{
     \thispagestyle{titlepage}
     \titleheader
 
@@ -470,3 +498,15 @@ P = ParameterCollection()
     \titleform
     \clearpage
 }
+
+%---------------------------------------------------------%
+% ESSAY TITLE PAGE
+% "doctype" = "essay"
+%---------------------------------------------------------%
+\addTitlePage{essay}{
+    \thispagestyle{titlepage}
+    \titleheader
+
+    \clearpage
+}
+
