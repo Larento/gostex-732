@@ -372,11 +372,19 @@ P = ParameterCollection()
     \end{tabularx}%
 }
 
-\newcommand{\textfieldShortLeft}[2]{%
+\newcommand{\textfieldShortLeft}[3][0em]{%
     \setlength{\tabcolsep}{0.5em}%
     \noindent%
     \begin{tabularx}{\textwidth}{@{} l L @{}}%
-        #1 & \uline{#2 \hspace{10em}}
+        #2 & \uline{#3 \hspace{#1}}
+    \end{tabularx}%
+}
+
+\newcommand{\textfieldShortLeftNoUL}[3][0em]{%
+    \setlength{\tabcolsep}{0.2em}%
+    \noindent%
+    \begin{tabularx}{\textwidth}{@{} l L @{}}%
+        #2 & #3 \hspace{#1}
     \end{tabularx}%
 }
 
@@ -502,13 +510,26 @@ P = ParameterCollection()
     \vspace{-1em}
 
     \begin{spacing}{2}
-    \smallfont\textfield{\MakeUppercase{Факультет}}{\settings{textFields/faculty}}
+        \smallfont\textfield{\MakeUppercase{Факультет}}{\settings{textFields/faculty}}
 
-    \smallfont\textfield{\MakeUppercase{Кафедра}}{\settings{textFields/department}}
+        \smallfont\textfield{\MakeUppercase{Кафедра}}{\settings{textFields/department}}
 
-    \vspace{3em}
+        \vspace{5em}
+    \end{spacing}
+    
+    \begin{spacing}{1.5}
+        \centering\hugefont\textbf{{\MakeUppercase{Реферат}}}
 
-    \centering\hugefont\textbf{\ulinethick{\MakeUppercase{\settings{textFields/doctitle}}}}
+        \centering\hugefont{\settings{textFields/doctitle}}
+
+        \vspace{10em}
+    \end{spacing}
+
+    \begin{spacing}{1.5}
+        \textfieldShortLeftNoUL{Студент:}{\settings{textFields/student}}
+        \textfieldShortLeftNoUL{Группа:}{\settings{textFields/group}}
+        \textfieldShortLeftNoUL{Вариант}{\settings{textFields/variant}}
+        \textfieldShortLeftNoUL{Преподаватель:}{\settings{textFields/prof}}
     \end{spacing}
 
     \clearpage
