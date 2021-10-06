@@ -57,12 +57,7 @@ P = ParameterCollection()
 \end{pycode}
 
 \newcommand{\settings}[1]{
-    \directlua{
-        tex.sprint(scripts.getTableFields(
-            settings,
-            "\luaescapestring{\unexpanded{#1}}"
-        ))
-    }
+    \directlua{tex.sprint(scripts.getTableFields(settings, "\luaescapestring{\unexpanded{#1}}"))}
 }
 
 \RequirePackage{ifthen}
@@ -453,7 +448,7 @@ P = ParameterCollection()
 }
 
 \newcommand{\addTitlePage}[2]{
-    \ifStringsEqual{\settings{doctype}}{#1}{
+    \ifStringsEqual{\directlua{tex.sprint(settings["doctype"])}}{#1}{
         \renewcommand{\titlepage}{#2}
     }
 }
