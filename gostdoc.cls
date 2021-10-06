@@ -450,17 +450,14 @@ P = ParameterCollection()
     \renewcommand{\headrulewidth}{0mm}%
 }
 
-\newenvironment{\ifStringsEqual}[2]{%
-    \ifthenelse{\equal{\detokenize{#1}}{\detokenize{#2}}}
-}{%
-    }%
-    {}%
+\newcommand{\ifStringsEqual}[3]{%
+    \ifthenelse{\equal{#1}{#2}}{#3}{}
 }
 
 \newcommand{\addTitlePage}[2]{
-    \begin{ifStringsEqual}{\directlua{tex.sprint(settings["doctype"])}}{#1}
+    \ifStringsEqual{\directlua{tex.sprint(settings["doctype"])}}{#1}{
         \renewcommand{\titlepage}{#2}
-    \end{ifStringsEqual}
+    }
 }
 
 %---------------------------------------------------------%
