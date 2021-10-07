@@ -265,11 +265,13 @@ P = ParameterCollection()
     graphbox
 }
 
+\newcommand{\imagePath}{\directlua{scripts.getTableFields("path/images")}}
+
 % Regular labeled figure
 \newcommand{\insertfigure}[3][\linewidth]{
     \begin{figure}[!ht]%
         \centering%
-        \includegraphics[width=#1]{\settings{path/images}/#2}%
+        \includegraphics[width=#1]{\imagePath/#2}%
         \caption{#3}\label{fig:#2}%
         \refstepcounter{figures}
         \vspace{-10pt}
@@ -280,7 +282,7 @@ P = ParameterCollection()
 \newcommand{\insertfigurewithdesc}[4][\linewidth]{
     \begin{figure}[!ht]
         \centering
-        \includegraphics[width=#1]{\settings{path/images}/#2}
+        \includegraphics[width=#1]{\imagePath/#2}
         \caption*{#3}
         \vspace{-10pt}
         \caption{#4}\label{fig:#2}
