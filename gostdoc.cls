@@ -265,7 +265,7 @@ P = ParameterCollection()
     graphbox
 }
 
-\newcommand{\imagePath}{\directlua{scripts.getTableFields("path/images")}}
+\newcommand{\imagePath}{\directlua{tex.sprint(settings["path"]["images"])}}
 
 % Regular labeled figure
 \newcommand{\insertfigure}[3][\linewidth]{
