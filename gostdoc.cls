@@ -278,6 +278,16 @@ P = ParameterCollection()
     \end{figure}%
 }
 
+\newcommand{\figure}[2][\linewidth]{
+    \begin{figure}[!ht]%
+        \centering%
+        \includegraphics[width=#1]{\imagePath/#2}%
+        % \caption{#3}\label{fig:#2}%
+        \refstepcounter{figures}
+        \vspace{-10pt}
+    \end{figure}%
+}
+
 % Figure with some description above label
 \newcommand{\insertfigurewithdesc}[4][\linewidth]{
     \begin{figure}[!ht]
