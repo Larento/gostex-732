@@ -283,7 +283,6 @@ P = ParameterCollection()
         \centering%
         \includegraphics[width=#1]{\imagePath/#2}%
         \refstepcounter{figures}
-        \vspace{-10pt}
     \end{figure}%
 }
 
