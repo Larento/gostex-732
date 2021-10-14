@@ -93,7 +93,6 @@ P = ParameterCollection()
 \RequirePackage[russian]{babel}
 \RequirePackage{fontspec}
 \setmainfont{Times New Roman}
-\setmathfont{XITS Math}
 
 % Font styles
 \newcommand{\smallfont}{\fontsize{12pt}{14.4pt}\selectfont}
@@ -359,6 +358,7 @@ P = ParameterCollection()
     siunitx,
     unicode-math
 }
+\setmathfont{XITS Math}
 
 \input{node_modules/gostex-732/include/siunitx}
 
