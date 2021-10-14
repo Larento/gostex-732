@@ -93,6 +93,7 @@ P = ParameterCollection()
 \RequirePackage[russian]{babel}
 \RequirePackage{fontspec}
 \setmainfont{Times New Roman}
+\setmathfont{XITS Math}
 
 % Font styles
 \newcommand{\smallfont}{\fontsize{12pt}{14.4pt}\selectfont}
