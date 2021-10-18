@@ -61,6 +61,7 @@ P = ParameterCollection()
 }
 
 \RequirePackage{ifthen}
+\RequirePackage{pdfpages}
 
 % Pages, figures, tables and appendix counters
 \newcounter{figures}
@@ -419,6 +420,16 @@ P = ParameterCollection()
     \end{tabularx}%
 }
 
+\newcommand{\textfieldInlineLabel}[2]{
+    \setlength{\tabcolsep}{0.5em}%
+    \renewcommand{\arraystretch}{0.45}%
+    \noindent%
+    \begin{tabularx}{9em}{@{} C @{}}%
+        \uline{\hfill #1 \hfill} \\
+        \smallfont#2
+    \end{tabularx}%
+}
+
 %---------------------------------------------------------%
 % TITLE PAGE MACROS
 %---------------------------------------------------------%
@@ -571,7 +582,7 @@ P = ParameterCollection()
 
     \begin{spacing}{2.5}
         \textfieldShortRightDoubleLabel{
-            Студент \settings{textFields/group}
+            Студент \textfieldInlineLabel{\settings{textFields/group}}{(Группа)}
         }{\settings{textFields/student}}{(Подпись, дата)}{(И.О.Фамилия)}
         \textfieldShortRightDoubleLabel{Руководитель курсового проекта}{\settings{textFields/prof}}{(Подпись, дата)}{(И.О.Фамилия)}
     \end{spacing}
