@@ -585,9 +585,9 @@ P = ParameterCollection()
     \smallfont\textfield{\MakeUppercase{Факультет}}{\settings{textFields/faculty}}
 
     \smallfont\textfield{\MakeUppercase{Кафедра}}{\settings{textFields/department}}
+    \end{spacing}
 
     \vspace{5em}
-    \end{spacing}
 
     \gigafont\centering\textbf{\MakeUppercase{
         Расчетно-поснительная записка\\
@@ -599,7 +599,7 @@ P = ParameterCollection()
 
     \vspace{1em}
 
-    \begin{parlines}{6}
+    \begin{parlines}{4}
         \centering\hugefont\textbf{\textit{\settings{textFields/doctitle}}}
     \end{parlines}
 
