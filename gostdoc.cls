@@ -581,11 +581,11 @@ P = ParameterCollection()
     \centering\bigfont\textbf{\textit{\settings{textFields/doctitle}}}
 
     \begin{spacing}{2.5}
-        \textfieldShortRightDoubleLabel{
-            \smallfont Студент группы \settings{textFields/group}
-        }{\settings{textFields/student}}{\tinyfont(Подпись, дата)}{\tinyfont(И.О.Фамилия)}
+        \smallfont\textfieldShortRightDoubleLabel{
+             Студент группы \settings{textFields/group}
+        }{\smallfont\settings{textFields/student}}{\tinyfont(Подпись, дата)}{\tinyfont(И.О.Фамилия)}
 
-        \textfieldShortRightDoubleLabel{\smallfont Руководитель курсового проекта}{\settings{textFields/prof}}{\tinyfont(Подпись, дата)}{\tinyfont(И.О.Фамилия)}
+        \smallfont\textfieldShortRightDoubleLabel{\smallfont Руководитель курсового проекта}{\smallfont\settings{textFields/prof}}{\tinyfont(Подпись, дата)}{\tinyfont(И.О.Фамилия)}
     \end{spacing}
 
     \clearpage
