@@ -589,17 +589,19 @@ P = ParameterCollection()
 
     \vspace{5em}
 
-    \gigafont\centering\textbf{\MakeUppercase{
-        Расчетно-поснительная записка\\
-        \hugefont\textit{
-            к курсовому проекту\\
-            на тему:
-        }
-    }}
+    \begin{spacing}{1.5}
+        \gigafont\centering\textbf{\MakeUppercase{
+            Расчетно-поснительная записка\\
+            \hugefont\textit{
+                к курсовому проекту\\
+                на тему:
+            }
+        }}
 
-    \begin{parlines}{4}
-        \centering\hugefont\textbf{\textit{\settings{textFields/doctitle}}}
-    \end{parlines}
+        \begin{parlines}{4}
+            \centering\hugefont\textbf{\textit{\settings{textFields/doctitle}}}
+        \end{parlines}
+    \end{spacing}
 
     \vspace{1em}
 
