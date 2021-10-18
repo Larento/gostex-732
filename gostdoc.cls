@@ -553,6 +553,25 @@ P = ParameterCollection()
 % TERM PAPER TITLE PAGE
 % "doctype" = "termPaper"
 %---------------------------------------------------------%
+\RequirePackage{environ}
+
+\makeatletter
+\NewEnviron{parlines}[1]{%
+  \par
+  \if@nobreak\def\kept@nobreak{\@nobreaktrue}\else\def\kept@nobreak{}\fi
+  \edef\kept@everypar{\the\everypar}%
+  \setbox0=\vbox{\BODY\@@par\xdef\parlinesprevgraf{\the\prevgraf}}%
+  \kept@nobreak
+  \everypar=\expandafter{\kept@everypar}%
+  \ifnum\parlinesprevgraf>#1\relax
+    ERROR, too long,\par\vspace{#1\baselineskip}%
+  \else
+    \BODY\par
+    \vspace{\numexpr#1-\parlinesprevgraf\relax\baselineskip}%
+  \fi
+}
+\makeatother
+
 \addTitlePage{termPaper}{
     \thispagestyle{titlepage}
     \titleheader
