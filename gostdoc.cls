@@ -598,7 +598,7 @@ P = ParameterCollection()
     }}
 
     \begin{parlines}{6}
-        \centering\bigfont\textbf{\textit{\settings{textFields/doctitle}}}
+        \centering\hugefont\textbf{\textit{\settings{textFields/doctitle}}}
     \end{parlines}
 
     \vspace{3em}
