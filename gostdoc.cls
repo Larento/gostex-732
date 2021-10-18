@@ -451,7 +451,7 @@ P = ParameterCollection()
 
         \textfieldShortRightDoubleLabel{Студент}{\textbf{\settings{textFields/student}}}{подпись, дата}{фамилия, и.о.}
         \textfieldShortRightDoubleLabel{Руководитель практики}{\textbf{\settings{textFields/prof}}}{подпись, дата}{фамилия, и.о.}
-        \textfieldShortLeft{Оценка}{}
+        \textfieldShortLeft[]{Оценка}{}
     \end{spacing}
 }
 
@@ -546,3 +546,34 @@ P = ParameterCollection()
     \clearpage
 }
 
+%---------------------------------------------------------%
+% TERM PAPER TITLE PAGE
+% "doctype" = "termPaper"
+%---------------------------------------------------------%
+\addTitlePage{termPaper}{
+    \thispagestyle{titlepage}
+    \titleheader
+
+    \noindent\rule[-1em]{\textwidth}{3pt}
+    \noindent\rule[0.75em]{\textwidth}{0.5pt}
+
+    \vspace{-1em}
+
+    \begin{spacing}{2}
+    \smallfont\textfield{\MakeUppercase{Факультет}}{\settings{textFields/faculty}}
+
+    \smallfont\textfield{\MakeUppercase{Кафедра}}{\settings{textFields/department}}
+
+    \vspace{3em}
+
+    \centering\hugefont\textbf{\ulinethick{\MakeUppercase{\settings{textFields/doctitle}}}}
+    \end{spacing}
+
+    \begin{spacing}{2.5}
+        \textfieldShortRightDoubleLabel{
+            Студент \settings{textFields/group}
+        }{\settings{textFields/student}}{(Подпись, дата)}{(И.О.Фамилия)}
+        \textfieldShortRightDoubleLabel{Руководитель курсового проекта}{\settings{textFields/prof}}{(Подпись, дата)}{(И.О.Фамилия)}
+    \edn{spacing}
+    \clearpage
+}
