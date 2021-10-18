@@ -96,9 +96,11 @@ P = ParameterCollection()
 \setmainfont{Times New Roman}
 
 % Font styles
+\newcommand{\tinyfont}{\fontsize{10pt}{12pt}\selectfont}
 \newcommand{\smallfont}{\fontsize{12pt}{14.4pt}\selectfont}
-\newcommand{\bigfont}{\fontsize{16pt}{19.2}\selectfont}
+\newcommand{\bigfont}{\fontsize{16pt}{19.2pt}\selectfont}
 \newcommand{\hugefont}{\fontsize{18pt}{21.6pt}\selectfont}
+\newcommand{\gigafont}{\fontsize{20pt}{24pt}\selectfont}
 \newcommand{\structuralsectionfont}{\bigfont\bfseries\MakeUppercase}
 \newcommand{\regularsectionfont}{\bigfont\bfseries}
 
@@ -406,7 +408,7 @@ P = ParameterCollection()
     \noindent%
     \begin{tabularx}{\textwidth}{@{} l C @{}}%
         #1      & \uline{#2 \hfill} \\
-        \hfill  & \smallfont\textit{#3}
+        \hfill  & #3
     \end{tabularx}%
 }
 
@@ -416,7 +418,7 @@ P = ParameterCollection()
     \noindent%
     \begin{tabularx}{\textwidth}{@{} l C x{6em} x{9em} @{}}%
         #1 & \hfill & \uline{\hfill} & \uline{\hfill #2 \hfill} \\
-        \hfill & \hfill & \smallfont#3 & \smallfont#4
+        \hfill & \hfill & #3 & #4
     \end{tabularx}%
 }
 
@@ -443,7 +445,7 @@ P = ParameterCollection()
 
 \newcommand{\titleform}{
     \begin{spacing}{2.5}
-        \textfieldLabel{Студент}{\settings{textFields/fullname}}{\textit{фамилия, имя, отчество}}
+        \textfieldLabel{Студент}{\settings{textFields/fullname}}{\smallfont\textit{фамилия, имя, отчество}}
         \textfield{Группа}{\settings{textFields/group}}
         \textfield{Тип практики}{\settings{textFields/practiceType}}
         \textfield{Название предприятия}{\settings{textFields/factory}}
@@ -451,7 +453,7 @@ P = ParameterCollection()
         \vspace{3em}
 
         \textfieldShortRightDoubleLabel{Студент}{\textbf{\settings{textFields/student}}}{\textit{подпись, дата}}{\textit{фамилия, и.о.}}
-        \textfieldShortRightDoubleLabel{Руководитель практики}{\textbf{\settings{textFields/prof}}}{\textit{подпись, дата}}{\textit{фамилия, и.о.}}
+        \textfieldShortRightDoubleLabel{Руководитель практики}{\textbf{\settings{textFields/prof}}}{\smallfont\textit{подпись, дата}}{\smallfont\textit{фамилия, и.о.}}
         \textfieldShortLeft[5em]{Оценка}{}
     \end{spacing}
 }
@@ -567,9 +569,9 @@ P = ParameterCollection()
 
     \vspace{3em}
 
-    \centering\hugefont\textbf{\MakeUppercase{
-        Расчетно-поснительная записка\\
-        \textit{
+    \centering\textbf{\MakeUppercase{
+        \gigafontРасчетно-поснительная записка\\
+        \hugefont\textit{
             к курсовому проекту\\
             на тему:
         }
@@ -580,9 +582,10 @@ P = ParameterCollection()
 
     \begin{spacing}{2.5}
         \textfieldShortRightDoubleLabel{
-            Студент группы \settings{textFields/group}
-        }{\settings{textFields/student}}{(Подпись, дата)}{(И.О.Фамилия)}
-        \textfieldShortRightDoubleLabel{Руководитель курсового проекта}{\settings{textFields/prof}}{(Подпись, дата)}{(И.О.Фамилия)}
+            \smallfontСтудент группы \settings{textFields/group}
+        }{\settings{textFields/student}}{\tinyfont(Подпись, дата)}{\tinyfont(И.О.Фамилия)}
+
+        \textfieldShortRightDoubleLabel{\smallfontРуководитель курсового проекта}{\settings{textFields/prof}}{\tinyfont(Подпись, дата)}{\tinyfont(И.О.Фамилия)}
     \end{spacing}
 
     \clearpage
