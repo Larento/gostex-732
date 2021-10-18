@@ -582,10 +582,10 @@ P = ParameterCollection()
 
     \begin{spacing}{2.5}
         \textfieldShortRightDoubleLabel{
-            \smallfontСтудент группы \settings{textFields/group}
+            \smallfont Студент группы \settings{textFields/group}
         }{\settings{textFields/student}}{\tinyfont(Подпись, дата)}{\tinyfont(И.О.Фамилия)}
 
-        \textfieldShortRightDoubleLabel{\smallfontРуководитель курсового проекта}{\settings{textFields/prof}}{\tinyfont(Подпись, дата)}{\tinyfont(И.О.Фамилия)}
+        \textfieldShortRightDoubleLabel{\smallfont Руководитель курсового проекта}{\settings{textFields/prof}}{\tinyfont(Подпись, дата)}{\tinyfont(И.О.Фамилия)}
     \end{spacing}
 
     \clearpage
