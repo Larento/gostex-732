@@ -597,7 +597,11 @@ P = ParameterCollection()
         }
     }}
 
-    \centering\bigfont\textbf{\textit{\settings{textFields/doctitle}}}
+    \begin{parlines}{6}
+        \centering\bigfont\textbf{\textit{\settings{textFields/doctitle}}}
+    \end{parlines}
+
+    \vspace{3em}
 
     \begin{spacing}{2.5}
         \smallfont\textfieldShortRightDoubleLabel{
