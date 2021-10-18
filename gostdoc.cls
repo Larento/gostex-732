@@ -413,7 +413,7 @@ P = ParameterCollection()
     \setlength{\tabcolsep}{0.5em}%
     \renewcommand{\arraystretch}{0.45}%
     \noindent%
-    \begin{tabularx}{\textwidth}{@{} l C x{6em} x{12em} @{}}%
+    \begin{tabularx}{\textwidth}{@{} l C x{6em} x{9em} @{}}%
         #1 & \hfill & \uline{\hfill} & \uline{\hfill #2 \hfill} \\
         \hfill & \hfill & \smallfont#3 & \smallfont#4
     \end{tabularx}%
