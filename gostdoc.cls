@@ -567,6 +567,14 @@ P = ParameterCollection()
 
     \vspace{3em}
 
+    \centering\hugefont\textbf{\MakeUppercse{
+        Расчетно-поснительная записка\\
+        \textit{
+            к курсовому проекту\\
+            на тему:
+        }
+    }}
+
     \centering\hugefont\textbf{\ulinethick{\MakeUppercase{\settings{textFields/doctitle}}}}
     \end{spacing}
 
