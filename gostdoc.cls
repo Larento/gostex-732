@@ -567,7 +567,7 @@ P = ParameterCollection()
 
     \vspace{3em}
 
-    \centering\hugefont\textbf{\MakeUppercse{
+    \centering\hugefont\textbf{\MakeUppercase{
         Расчетно-поснительная записка\\
         \textit{
             к курсовому проекту\\
