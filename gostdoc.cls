@@ -99,8 +99,8 @@ P = ParameterCollection()
 \newcommand{\tinyfont}{\fontsize{10pt}{12pt}\selectfont}
 \newcommand{\smallfont}{\fontsize{12pt}{14.4pt}\selectfont}
 \newcommand{\bigfont}{\fontsize{16pt}{19.2pt}\selectfont}
-\newcommand{\hugefont}{\fontsize{18pt}{21.6pt}\selectfont}
-\newcommand{\gigafont}{\fontsize{20pt}{24pt}\selectfont}
+\newcommand{\hugefont}{\fontsize{20pt}{24pt}\selectfont}
+\newcommand{\gigafont}{\fontsize{22pt}{26.4pt}\selectfont}
 \newcommand{\structuralsectionfont}{\bigfont\bfseries\MakeUppercase}
 \newcommand{\regularsectionfont}{\bigfont\bfseries}
 
@@ -568,17 +568,17 @@ P = ParameterCollection()
     \smallfont\textfield{\MakeUppercase{Кафедра}}{\settings{textFields/department}}
 
     \vspace{3em}
+    \end{spacing}
 
     \gigafont\centering\textbf{\MakeUppercase{
-        Расчетно-поснительная записка
+        Расчетно-поснительная записка\\
         \hugefont\textit{
             к курсовому проекту\\
             на тему:
         }
     }}
 
-    \centering\hugefont\textbf{\ulinethick{\MakeUppercase{\settings{textFields/doctitle}}}}
-    \end{spacing}
+    \centering\bigfont\textbf{\textit{\settings{textFields/doctitle}}}
 
     \begin{spacing}{2.5}
         \textfieldShortRightDoubleLabel{
