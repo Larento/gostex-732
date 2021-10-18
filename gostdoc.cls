@@ -415,7 +415,7 @@ P = ParameterCollection()
     \noindent%
     \begin{tabularx}{\textwidth}{@{} l C x{6em} x{12em} @{}}%
         #1 & \hfill & \uline{\hfill} & \uline{\hfill #2 \hfill} \\
-        \hfill & \hfill & \smallfont\textit{#3} & \smallfont\textit{#4}
+        \hfill & \hfill & \smallfont#3 & \smallfont#4
     \end{tabularx}%
 }
 
@@ -442,16 +442,16 @@ P = ParameterCollection()
 
 \newcommand{\titleform}{
     \begin{spacing}{2.5}
-        \textfieldLabel{Студент}{\settings{textFields/fullname}}{фамилия, имя, отчество}
+        \textfieldLabel{Студент}{\settings{textFields/fullname}}{\textit{фамилия, имя, отчество}}
         \textfield{Группа}{\settings{textFields/group}}
         \textfield{Тип практики}{\settings{textFields/practiceType}}
         \textfield{Название предприятия}{\settings{textFields/factory}}
 
         \vspace{3em}
 
-        \textfieldShortRightDoubleLabel{Студент}{\textbf{\settings{textFields/student}}}{подпись, дата}{фамилия, и.о.}
-        \textfieldShortRightDoubleLabel{Руководитель практики}{\textbf{\settings{textFields/prof}}}{подпись, дата}{фамилия, и.о.}
-        \textfieldShortLeft[]{Оценка}{}
+        \textfieldShortRightDoubleLabel{Студент}{\textbf{\settings{textFields/student}}}{\textit{подпись, дата}}{\textit{фамилия, и.о.}}
+        \textfieldShortRightDoubleLabel{Руководитель практики}{\textbf{\settings{textFields/prof}}}{\textit{подпись, дата}}{\textit{фамилия, и.о.}}
+        \textfieldShortLeft[5em]{Оценка}{}
     \end{spacing}
 }
 
@@ -494,13 +494,13 @@ P = ParameterCollection()
     \vspace{-1em}
 
     \begin{spacing}{2}
-    \smallfont\textfield{\MakeUppercase{Факультет}}{\settings{textFields/faculty}}
+        \smallfont\textfield{\MakeUppercase{Факультет}}{\settings{textFields/faculty}}
 
-    \smallfont\textfield{\MakeUppercase{Кафедра}}{\settings{textFields/department}}
+        \smallfont\textfield{\MakeUppercase{Кафедра}}{\settings{textFields/department}}
 
-    \vspace{3em}
+        \vspace{3em}
 
-    \centering\hugefont\textbf{\ulinethick{\MakeUppercase{\settings{textFields/doctitle}}}}
+        \centering\hugefont\textbf{\ulinethick{\MakeUppercase{\settings{textFields/doctitle}}}}
     \end{spacing}
 
     \titleform
@@ -574,6 +574,7 @@ P = ParameterCollection()
             Студент \settings{textFields/group}
         }{\settings{textFields/student}}{(Подпись, дата)}{(И.О.Фамилия)}
         \textfieldShortRightDoubleLabel{Руководитель курсового проекта}{\settings{textFields/prof}}{(Подпись, дата)}{(И.О.Фамилия)}
-    \edn{spacing}
+    \end{spacing}
+
     \clearpage
 }
