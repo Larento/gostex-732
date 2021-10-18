@@ -175,7 +175,7 @@ P = ParameterCollection()
     \regularsectionformat
 }
 
-\renewcommand{\abstract}{\structuralsection{РЕФЕРАТ}}
+\renewcommand{\abstract}{\structuralsectionNOTOC{РЕФЕРАТ}}
 \newcommand{\task}{\structuralsectionNOTOC{ИНДИВИДУАЛЬНОЕ ЗАДАНИЕ}}
 \newcommand{\introduction}{\structuralsection{ВВЕДЕНИЕ}}
 \newcommand{\conclusion}{\structuralsection{ЗАКЛЮЧЕНИЕ}}
