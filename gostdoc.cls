@@ -586,7 +586,7 @@ P = ParameterCollection()
 
     \smallfont\textfield{\MakeUppercase{Кафедра}}{\settings{textFields/department}}
 
-    \vspace{3em}
+    \vspace{5em}
     \end{spacing}
 
     \gigafont\centering\textbf{\MakeUppercase{
@@ -597,11 +597,13 @@ P = ParameterCollection()
         }
     }}
 
+    \vspace{1em}
+
     \begin{parlines}{6}
         \centering\hugefont\textbf{\textit{\settings{textFields/doctitle}}}
     \end{parlines}
 
-    \vspace{3em}
+    \vspace{2em}
 
     \begin{spacing}{2.5}
         \smallfont\textfieldShortRightDoubleLabel{
