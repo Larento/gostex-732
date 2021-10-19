@@ -307,10 +307,10 @@ P = ParameterCollection()
     \end{figure}
 }
 
-\insertpdfset{pages={-}}
+\includepdfset{pages={-}}
 
-\newcommand{\insertpdfpages}[2][]{
-    \insertpdf[#1]{\imagePath/#2.pdf}
+\newcommand{\insertpdf}[2][]{
+    \includepdf[#1]{\imagePath/#2.pdf}
 }
 
 \newcommand{\insertappendixpdf}[2][]{
