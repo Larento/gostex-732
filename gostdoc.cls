@@ -62,7 +62,7 @@ P = ParameterCollection()
 
 \RequirePackage{ifthen}
 \RequirePackage{pdfpages}
-\usepackage{atveryend}
+\RequirePackage{atveryend}
 
 % Pages, figures, tables and appendix counters
 \newcounter{figures}
@@ -81,11 +81,15 @@ P = ParameterCollection()
     \addtocounter{#1}{-1}\refstepcounter{#1}\label{ref#1}
 }
 
-\AtVeryEndDocument{
+\newcommand{\setCounterRefs}{
     \label{refpages}
     \createCounterRef{figures}
     \createCounterRef{tables}
     \createCounterRef{appendix}
+}
+
+\AfterLastShipout{
+    \setCounterRefs{}
 }
 
 %---------------------------------------------------------%
@@ -301,6 +305,27 @@ P = ParameterCollection()
         \refstepcounter{figures}
         \vspace{-10pt}
     \end{figure}
+}
+
+\insertpdfset{pages={-}}
+
+\newcommand{\insertpdfpages}[2][]{
+    \insertpdf[#1]{\imagePath/#2.pdf}
+}
+
+\newcommand{\insertappendixpdf}[2][]{
+    \pdfximage{\imagePath/#2.pdf}% Read entire PDF
+    \edef\totalpages{\the\pdflastximagepages}% Store number of pages
+    \edef\lastbutonepage{\number\numexpr\totalpages-1}% Store last page - 1
+
+    \ifnum\totalpages>1
+        \includepdf[pages=1-\lastbutonepage]{\imagePath/#2.pdf}%
+    \fi
+
+    \includepdf[#1, pages=\totalpages, pagecommand={
+        \thispagestyle{empty}
+        \setCounterRefs{}
+    }]{\imagePath/#2.pdf}
 }
 
 %---------------------------------------------------------%
