@@ -61,7 +61,6 @@ P = ParameterCollection()
 }
 
 \RequirePackage{ifthen}
-\RequirePackage{pdfpages}
 \RequirePackage{atveryend}
 
 % Pages, figures, tables and appendix counters
@@ -270,7 +269,9 @@ P = ParameterCollection()
 %---------------------------------------------------------%
 \RequirePackage{
     graphicx,
-    graphbox
+    graphbox,
+    pdfpages,
+    luatex85
 }
 
 \newcommand{\imagePath}{\directlua{tex.sprint(settings["path"]["images"])}}
