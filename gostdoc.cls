@@ -314,21 +314,6 @@ P = ParameterCollection()
     \includepdf[#1]{\imagePath/#2.pdf}
 }
 
-\newcommand{\insertappendixpdf}[2][]{
-    \pdfximage{\imagePath/#2.pdf}% Read entire PDF
-    \edef\totalpages{\the\pdflastximagepages}% Store number of pages
-    \edef\lastbutonepage{\number\numexpr\totalpages-1}% Store last page - 1
-
-    \ifnum\totalpages>1
-        \includepdf[pages=1-\lastbutonepage]{\imagePath/#2.pdf}%
-    \fi
-
-    \includepdf[#1, pages=\totalpages, pagecommand={
-        \thispagestyle{empty}
-        \setCounterRefs{}
-    }]{\imagePath/#2.pdf}
-}
-
 %---------------------------------------------------------%
 % TABLES
 %---------------------------------------------------------%
