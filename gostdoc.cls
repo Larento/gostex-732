@@ -62,6 +62,7 @@ P = ParameterCollection()
 
 \RequirePackage{ifthen}
 \RequirePackage{pdfpages}
+\usepackage{atveryend}
 
 % Pages, figures, tables and appendix counters
 \newcounter{figures}
@@ -80,7 +81,7 @@ P = ParameterCollection()
     \addtocounter{#1}{-1}\refstepcounter{#1}\label{ref#1}
 }
 
-\AtEndDocument{
+\AtVeryEndDocument{
     \label{refpages}
     \createCounterRef{figures}
     \createCounterRef{tables}
