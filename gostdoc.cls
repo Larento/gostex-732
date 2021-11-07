@@ -562,6 +562,45 @@ P = ParameterCollection()
 }
 
 %---------------------------------------------------------%
+% ESSAY TITLE PAGE
+% "doctype" = "hometask"
+%---------------------------------------------------------%
+\addTitlePage{hometask}{
+    \thispagestyle{titlepage}
+    \titleheader
+
+    \noindent\rule[-1em]{\textwidth}{3pt}
+    \noindent\rule[0.75em]{\textwidth}{0.5pt}
+
+    \vspace{-1em}
+
+    \begin{spacing}{2}
+        \smallfont\textfield{\MakeUppercase{Факультет}}{\settings{textFields/faculty}}
+
+        \smallfont\textfield{\MakeUppercase{Кафедра}}{\settings{textFields/department}}
+
+        \vspace{5em}
+    \end{spacing}
+    
+    \begin{spacing}{1.5}
+        \centering\hugefont\textbf{{\MakeUppercase{Домашнее задание}}}
+
+        \centering\bigfont{по дисциплине: "\settings{textFields/course}"}
+
+        \vspace{10em}
+    \end{spacing}
+
+    \begin{spacing}{1.5}
+        \textfieldShortLeftNoUL{Студент:}{\settings{textFields/student}}
+        \textfieldShortLeftNoUL{Группа:}{\settings{textFields/group}}
+        \textfieldShortLeftNoUL{Вариант}{\settings{textFields/variant}}
+        \textfieldShortLeftNoUL{Преподаватель:}{\settings{textFields/prof}}
+    \end{spacing}
+
+    \clearpage
+}
+
+%---------------------------------------------------------%
 % TERM PAPER TITLE PAGE
 % "doctype" = "termPaper"
 %---------------------------------------------------------%
