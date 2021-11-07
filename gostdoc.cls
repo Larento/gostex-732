@@ -540,7 +540,7 @@ P = ParameterCollection()
 
         \smallfont\textfield{\MakeUppercase{Кафедра}}{\settings{textFields/department}}
 
-        \vspace{5em}
+        \vspace{7em}
     \end{spacing}
     
     \begin{spacing}{1.5}
@@ -548,7 +548,7 @@ P = ParameterCollection()
 
         \centering\hugefont{\settings{textFields/doctitle}}
 
-        \vspace{10em}
+        \vspace{8em}
     \end{spacing}
 
     \begin{spacing}{1.5}
@@ -579,15 +579,15 @@ P = ParameterCollection()
 
         \smallfont\textfield{\MakeUppercase{Кафедра}}{\settings{textFields/department}}
 
-        \vspace{5em}
+        \vspace{7em}
     \end{spacing}
     
     \begin{spacing}{1.5}
         \centering\hugefont\textbf{{\MakeUppercase{Домашнее задание}}}
 
-        \centering\bigfont{по дисциплине: "\settings{textFields/course}"}
+        \centering\bigfont{по дисциплине: «\settings{textFields/course}»}
 
-        \vspace{10em}
+        \vspace{8em}
     \end{spacing}
 
     \begin{spacing}{1.5}
