@@ -587,6 +587,7 @@ P = ParameterCollection()
 
         \centering\bigfont{по дисциплине: «\settings{textFields/course}»}
 
+        \centering\bigfont{\settings{textFields/doctitle}}
         \vspace{8em}
     \end{spacing}
 
