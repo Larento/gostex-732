@@ -586,9 +586,10 @@ P = ParameterCollection()
         \centering\hugefont\textbf{{\MakeUppercase{Домашнее задание}}}
 
         \centering\bigfont{по дисциплине: «\settings{textFields/course}»}
+        \vspace{2em}
 
-        \centering\bigfont{\settings{textFields/doctitle}}
-        \vspace{8em}
+        \centering\hugefont{\settings{textFields/doctitle}}
+        \vspace{6em}
     \end{spacing}
 
     \begin{spacing}{1.5}
