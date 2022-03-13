@@ -464,7 +464,7 @@ P = ParameterCollection()
 
         \vspace{3em}
 
-        \textfieldShortRightDoubleLabel{Студент}{\textbf{\settings{textFields/student}}}{\textit{подпись, дата}}{\textit{фамилия, и.о.}}
+        \textfieldShortRightDoubleLabel{Студент}{\textbf{\settings{textFields/student}}}{\smallfont\textit{подпись, дата}}{\smallfont\textit{фамилия, и.о.}}
         \textfieldShortRightDoubleLabel{Руководитель практики}{\textbf{\settings{textFields/prof}}}{\smallfont\textit{подпись, дата}}{\smallfont\textit{фамилия, и.о.}}
         \textfieldShortLeft[5em]{Оценка}{}
     \end{spacing}
