@@ -1,5 +1,7 @@
 # LaTeX GOST7-32 Document Class
 
+# NOTE: This project has been abandonded and what is written below will never be realized.
+
 ## What is this?
 This package is a LaTeX document class for writing papers under the GOST7-32 Russian Standard. It includes full support for:
 * correct document formatting;
